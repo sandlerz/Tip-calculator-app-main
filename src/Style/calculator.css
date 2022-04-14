@@ -1,0 +1,54 @@
+.Calculator{
+  width: 92rem;
+  height: 48rem;
+  background-color: var(--White);
+  border-radius: 2rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.left-container{
+  height: 42rem;
+  width: 41.5rem;
+  border-radius: 2rem;
+}
+
+.right-container{
+  background-color: var(--Very-dark-cyan);
+  min-height: 42rem;
+  height: 42rem;
+  width: 41.5rem;
+  border-radius: 2rem;
+  padding: 5rem 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.tip{
+  width: 12rem;
+  height: 5rem;
+  position: relative;
+  border: none;
+  font-family: 'Space Mono', monospace;
+}
+
+.tip:hover{
+  background-color: white;
+}
+
+.TipAmount{
+  display: flex;
+  justify-content: space-between;
+}
+
+.Total{
+  display: flex;
+  justify-content: space-between;
+}
+
+.reset{
+  margin-top: auto;
+}
