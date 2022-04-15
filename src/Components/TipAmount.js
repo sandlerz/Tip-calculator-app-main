@@ -1,12 +1,13 @@
-export default function TipAmount() {
+export default function TipAmount(props) {
+
   return (
     <div className="TipAmount">
       <div>
-        <p>Tip Amount</p>
-        <p>/ person</p>
+        <p className="total-quantity">Tip Amount</p>
+        <p className="total-person">/ person</p>
       </div>
-      <div>
-        $4.27
+      <div className="total-result">
+        ${isNaN(props.result) ? "0.00" : props.result}
       </div>
     </div>
   )
