@@ -11,6 +11,9 @@ input{
   color: var(--Very-dark-cyan);
   border: 0.2rem solid var(--Very-light-grayish-cyan);
   padding-right: 1rem;
+  height: 5rem;
+  width: 100%;
+  transition: border 0.5s;
 }
 
 input:focus{
@@ -25,7 +28,7 @@ input::placeholder{
 .input-icon{
   position: absolute;
   z-index: 1;
-  top: 1.5rem;
+  top: 1.7rem;
   left: 2rem;
 }
 
@@ -55,52 +58,75 @@ input::placeholder{
 
 /* Bill */
 
-.bill-container{
-}
-
 .bill-input-container{
-  width: 100%;
-  height: 4.6rem;
+  margin-top: 0.5rem;
   position: relative;
-}
-
-.input-bill{
-  position: absolute;
-  width: 100%;
 }
 
 /* End Bill */
 
 /* Select Tip */
 
-.tip{
-  width: 12rem;
+.input-selectTip-container{
+  margin-top: 0.5rem;
+  display: grid;
+  grid: repeat(2, auto) / repeat(3, auto);
+  gap: 1.5rem;
+}
+
+.btn-tip{
+  width: 11.5rem;
   height: 5rem;
   position: relative;
   border: none;
+  border-radius: 0.5rem;
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  font-size: 2.3rem;
+  letter-spacing: 0.1rem;
+  text-indent: 0.1rem;
   font-family: 'Space Mono', monospace;
+  cursor: pointer;
 }
 
-.tip:hover{
-  background-color: white;
+.btn-tip:hover{
+  background-color: var(--Light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+  transition: all 0.1s;
 }
 
-.input-selectTip{
-  height: 4.6rem;
-}
 
 /* End Select Tip */
 
 /* Number of people */
 
 .numberOfPeople-input-container{
+  margin-top: 0.5rem;
   position: relative;
 }
 
-.input-numberofpeople{
-  height: 4.6rem;
-  width: 100%;
+.error-container{
+  display: flex;
+  justify-content: space-between;
 }
+
+.error-msg{
+  color: var(--error);
+  animation: error 1s infinite;
+}
+
+@keyframes error{
+  0% {
+    opacity: 0.2;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.2;
+  }
+}
+
 /* End Number of people */
 
 /* RIGHT CONTAINER */

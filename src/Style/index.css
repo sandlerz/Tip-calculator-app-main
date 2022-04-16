@@ -20,5 +20,6 @@ body{
 
 .title{
   color: var(--Very-dark-cyan);
+  margin: 16rem 0 9rem;
 }
 

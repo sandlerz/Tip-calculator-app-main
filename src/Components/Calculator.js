@@ -47,7 +47,7 @@ export default function Calculator() {
       <div className="left-container">
         <Bill handleBill={handleCalculator} bill={calculator.bill}/>
         <SelectTip handleTip={handleCalculator} tip={calculator.tip}/>
-        <NumberOfPeople handlePeople={handleCalculator} numberOfPeople={calculator.numberOfPeople}/>
+        <NumberOfPeople handlePeople={handleCalculator} calculator={calculator}/>
       </div>
 
       <div className="right-container">
