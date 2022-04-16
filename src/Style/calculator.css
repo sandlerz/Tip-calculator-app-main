@@ -1,3 +1,36 @@
+/* Global */
+
+input{
+  height: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 2.5rem;
+  text-align: right;
+  background-color: var(--Very-light-grayish-cyan);
+  font-family: 'Space Mono', monospace;
+  color: var(--Very-dark-cyan);
+  border: 0.2rem solid var(--Very-light-grayish-cyan);
+  padding-right: 1rem;
+}
+
+input:focus{
+  border: 0.2rem solid var(--Strong-cyan);
+  outline: none;
+}
+
+input::placeholder{
+  color: var(--Grayish-cyan);
+}
+
+.input-icon{
+  position: absolute;
+  z-index: 1;
+  top: 1.5rem;
+  left: 2rem;
+}
+
+/* End Global */
+
 .Calculator{
   width: 92rem;
   height: 48rem;
@@ -6,16 +39,39 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  padding: 3rem;
 }
 
 /* LEFT CONTAINER */
 
 .left-container{
-  height: 42rem;
-  width: 41.5rem;
-  border-radius: 2rem;
+  padding: 5rem;
+  text-align: left;
+  color: var(--Dark-grayish-cyan);
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+/* Bill */
+
+.bill-container{
+}
+
+.bill-input-container{
+  width: 100%;
+  height: 4.6rem;
+  position: relative;
+}
+
+.input-bill{
+  position: absolute;
+  width: 100%;
+}
+
+/* End Bill */
+
+/* Select Tip */
 
 .tip{
   width: 12rem;
@@ -29,19 +85,38 @@
   background-color: white;
 }
 
+.input-selectTip{
+  height: 4.6rem;
+}
+
+/* End Select Tip */
+
+/* Number of people */
+
+.numberOfPeople-input-container{
+  position: relative;
+}
+
+.input-numberofpeople{
+  height: 4.6rem;
+  width: 100%;
+}
+/* End Number of people */
+
 /* RIGHT CONTAINER */
 
 .right-container{
   background-color: var(--Very-dark-cyan);
   min-height: 42rem;
   height: 42rem;
-  width: 41.5rem;
+  min-width: 41.5rem;
   border-radius: 2rem;
   padding: 5rem 3rem 4rem;
   display: flex;
   flex-direction: column;
   gap: 6rem;
   text-align: left;
+  margin: 3rem 3rem 3rem 0;
 }
 
 .Total{
@@ -88,7 +163,7 @@
   transition: background 0.1s;
 }
 
-.btn-reset-unselect{
+button:disabled {
   margin-top: auto;
   border: none;
   height: 5rem;
@@ -100,4 +175,9 @@
   background-color: var(--Strong-cyan);
   color: var(--Very-dark-cyan);
   opacity: 0.4;
+  cursor: unset;
+}
+
+button:disabled:hover{
+  background-color: var(--Strong-cyan);
 }

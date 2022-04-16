@@ -39,24 +39,15 @@ export default function SelectTip(props) {
         onClick={props.handleTip}
       >50%</button>
 
-      {props.tip == "" ? 
       <input
-        type="number"
+        type="text"
         name="tip"
         placeholder="Custom"
-        className="custom"
         value={props.tip}
         onChange={props.handleTip}
-      />:
-      <input
-        type="number"
-        name="tip"
-        placeholder="Custom"
-        className="custom"
-        value={props.tip}
-        onChange={props.handleTip}
+        maxLength="3"
+        className="input-selectTip"
       />
-      }
 
     </div>
   )
