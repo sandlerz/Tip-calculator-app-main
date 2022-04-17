@@ -8,6 +8,8 @@ import Total from "./Total";
 
 import "../Style/calculator.css";
 
+
+
 const validNumber = /^[0-9]*\.?[0-9]*$/
 
 export default function Calculator() {

@@ -2,6 +2,7 @@ import Calculator from './Components/Calculator'
 
 import './Style/variables.css'
 import './Style/index.css'
+import './Style/breakpoint.css';
 
 function App() {
   return (

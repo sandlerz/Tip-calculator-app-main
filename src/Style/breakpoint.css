@@ -1,0 +1,71 @@
+@media only screen and (max-width: 31.25em) {
+  html{
+    font-size: 3vw;
+  }
+
+  .title{
+    margin: 4.5rem;
+  }
+
+  .Calculator{
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+    width: 100%;
+    gap: 3.5rem;
+  }
+
+  input{
+    height: 4.5rem;
+  }
+
+  .input-icon{
+    width: 1rem;
+  }
+
+  .left-container{
+    padding: unset;
+    width: 100%;
+    justify-content: unset;
+    gap: 2.5rem;
+  }
+
+  .input-selectTip-container{
+    margin-top: 1.5rem;
+    grid: repeat(3, auto) / repeat(2, 1fr);
+  }
+
+  .btn-tip{
+    width: 100%;
+  }
+
+  .error-container{
+    align-items: baseline;
+  }
+  .error-msg{
+    font-size: 1.2rem;
+  }
+
+  .right-container{
+    min-width: 100%;
+    font-size: 1.3rem;
+    padding: 3.5rem 2rem 2rem;
+    height: 24rem;
+    min-height: auto;
+    margin: 0;
+    gap: 2rem;
+  }
+
+  .total-result{
+    font-size: 3rem;
+  }
+
+  .btn-reset{
+    height: 3.8rem;
+    margin-top: auto;
+  }
+
+  .btn-reset:disabled{
+    height: 3.8rem;
+  }
+}

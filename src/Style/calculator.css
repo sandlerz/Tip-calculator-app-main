@@ -155,7 +155,6 @@ input::placeholder{
   justify-content: space-between;
 }
 
-
 .total-quantity{
   color: var(--White);
 }
@@ -189,7 +188,7 @@ input::placeholder{
   transition: background 0.1s;
 }
 
-button:disabled {
+.btn-reset:disabled {
   margin-top: auto;
   border: none;
   height: 5rem;
@@ -204,6 +203,6 @@ button:disabled {
   cursor: unset;
 }
 
-button:disabled:hover{
+.btn-reset:disabled:hover{
   background-color: var(--Strong-cyan);
 }
