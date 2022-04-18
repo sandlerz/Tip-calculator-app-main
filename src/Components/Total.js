@@ -7,7 +7,7 @@ export default function Total(props) {
         <p className="total-person">/ person</p>
       </div>
       <div className="total-result">
-        ${props.result ? props.result : "0.00"}
+      ${isNaN(props.result) ? "0.00" : props.result}
       </div>
     </div>
   )

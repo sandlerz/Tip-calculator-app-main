@@ -1,14 +1,28 @@
 import icon from '../images/icon-person.svg'
 
 export default function NumberOfPeople(props) {
-  const style = {border: "0.2rem solid var(--error)"}
   const {bill , tip , numberOfPeople} = props.calculator
+  
+  let style = null
+  let error = null
+  
+  if(numberOfPeople == ""){
+    if(bill || tip){
+      error = <p className='error-msg'>Can't be zero</p>
+      style = {border: "0.2rem solid var(--error)"}
+    }
+  }
+
+  if(numberOfPeople === "0"){
+    error = <p className='error-msg'>Can't be zero</p>
+    style = {border: "0.2rem solid var(--error)"}
+  }
 
   return (
     <div>
       <div className='error-container'>
         <label htmlFor="numberOfPeople">Number of People</label>
-        { (!numberOfPeople && bill && tip) && <p className='error-msg'>Can't be zero</p> }
+        {error}
       </div>
       <div className='numberOfPeople-input-container'>
         <img className='input-icon' src={icon} />
@@ -21,7 +35,7 @@ export default function NumberOfPeople(props) {
           onChange={props.handlePeople}
           maxLength="2"
           className='input-numberOfPeople'
-          style={!numberOfPeople && bill && tip ? style : null }
+          style={style}
         />
       </div>
     </div>

@@ -8,8 +8,6 @@ import Total from "./Total";
 
 import "../Style/calculator.css";
 
-
-
 const validNumber = /^[0-9]*\.?[0-9]*$/
 
 export default function Calculator() {
@@ -42,6 +40,7 @@ export default function Calculator() {
   const {bill , tip , numberOfPeople} = calculator
   const totalTip = (bill * tip) / 100;
   const tipPerson = totalTip / numberOfPeople;
+  const totalTipPerson = (bill / numberOfPeople) + tipPerson
 
   return (
     <div className="Calculator">
@@ -54,7 +53,7 @@ export default function Calculator() {
 
       <div className="right-container">
         <TipAmount result={tipPerson.toFixed(2)} />
-        <Total result={totalTip.toFixed(2)} />
+        <Total result={totalTipPerson.toFixed(2)} />
         <button 
           className="btn-reset" 
           onClick={reset} 
